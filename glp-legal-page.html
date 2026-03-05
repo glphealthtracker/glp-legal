@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLP Health Tracker — Legal & Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f9fa;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 50%, #115e59 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 24px 50px;
+        }
+        .hero h1 {
+            font-size: 2.4em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .hero .tagline {
+            font-size: 1.15em;
+            opacity: 0.92;
+            font-weight: 400;
+            max-width: 500px;
+            margin: 0 auto 28px;
+        }
+        .hero .app-store-btn {
+            display: inline-block;
+            background: white;
+            color: #0d9488;
+            padding: 14px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .hero .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            max-width: 720px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .feature-card h3 {
+            font-size: 1.05em;
+            color: #0d9488;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            padding: 6px 0;
+            font-size: 0.95em;
+            color: #4b5563;
+        }
+        .feature-list li span {
+            margin-right: 8px;
+        }
+        .premium-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 10px;
+            border-radius: 20px;
+            margin-left: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            vertical-align: middle;
+        }
+
+        /* ===== NAV TABS ===== */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 40px 20px 0;
+            max-width: 720px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .nav-tabs a {
+            padding: 10px 20px;
+            background: white;
+            color: #0d9488;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9em;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+        }
+        .nav-tabs a:hover {
+            background: #0d9488;
+            color: white;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 36px 32px;
+            margin-top: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .section-header h2 {
+            font-size: 1.6em;
+            color: #111827;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .section-header .subtitle {
+            color: #6b7280;
+            font-size: 0.9em;
+        }
+        .section-header .entity {
+            color: #0d9488;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        h3.legal-heading {
+            font-size: 1.1em;
+            color: #111827;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        h4.legal-subheading {
+            font-size: 0.95em;
+            color: #374151;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+        .legal-text {
+            font-size: 0.92em;
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+        .legal-text strong {
+            color: #111827;
+        }
+        .legal-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .legal-list li {
+            font-size: 0.92em;
+            color: #4b5563;
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+        .legal-list li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: #0d9488;
+            font-weight: bold;
+        }
+
+        /* ===== IMPORTANT BOX ===== */
+        .important-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        .important-box p {
+            font-size: 0.92em;
+            color: #991b1b;
+            font-weight: 500;
+        }
+        .notice-box {
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        .notice-box p {
+            font-size: 0.92em;
+            color: #115e59;
+        }
+        .allcaps-box {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        .allcaps-box p {
+            font-size: 0.85em;
+            color: #374151;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            line-height: 1.8;
+        }
+
+        /* ===== SUPPORT / FAQ ===== */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h4 {
+            font-size: 1em;
+            color: #111827;
+            margin-bottom: 6px;
+        }
+        .faq-item p {
+            font-size: 0.92em;
+            color: #4b5563;
+        }
+        .contact-bar {
+            text-align: center;
+            background: #f0fdfa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 28px;
+        }
+        .contact-bar .email {
+            font-size: 1.1em;
+            color: #0d9488;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .contact-bar .response {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #9ca3af;
+            font-size: 0.8em;
+        }
+        .footer a {
+            color: #0d9488;
+            text-decoration: none;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 600px) {
+            .hero { padding: 40px 20px 36px; }
+            .hero h1 { font-size: 1.8em; }
+            .section { padding: 24px 20px; }
+            .features { padding: 0 16px; }
+            .nav-tabs { gap: 6px; }
+            .nav-tabs a { padding: 8px 14px; font-size: 0.82em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+    <h1>GLP Health Tracker</h1>
+    <p class="tagline">The only GLP-1 app that helps you escape telehealth and transition to a real doctor.</p>
+    <a href="https://apps.apple.com/app/glp-health-tracker/id6740613390" class="app-store-btn">Download on the App Store</a>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<div class="features">
+    <div class="feature-card">
+        <h3>Track Your Journey</h3>
+        <ul class="feature-list">
+            <li><span>💉</span> Log shots &amp; medication concentration</li>
+            <li><span>📊</span> Weight &amp; BMI tracking with charts</li>
+            <li><span>📝</span> Symptom logging with severity ratings</li>
+            <li><span>🧬</span> Science-based insights from CDC data</li>
+            <li><span>🔒</span> Private — all data stays on your device</li>
+        </ul>
+    </div>
+    <div class="feature-card">
+        <h3>Transition Toolkit <span class="premium-badge">Premium</span></h3>
+        <ul class="feature-list">
+            <li><span>🚀</span> Worried about losing your prescription?</li>
+            <li><span>✅</span> 7-step transition checklist</li>
+            <li><span>📋</span> HIPAA records request templates</li>
+            <li><span>🩺</span> Find OMA-certified GLP-1 doctors</li>
+            <li><span>📄</span> PDF health reports for your new doctor</li>
+            <li><span>📑</span> Prior authorization templates</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ===== JUMP LINKS ===== -->
+<div class="nav-tabs">
+    <a href="#support">Support &amp; FAQ</a>
+    <a href="#terms">Terms of Service</a>
+    <a href="#privacy">Privacy Policy</a>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<div class="content">
+
+    <!-- ==================== SUPPORT ==================== -->
+    <div class="section" id="support">
+        <div class="section-header">
+            <h2>Support &amp; FAQ</h2>
+            <p class="entity">GLP Health Tracker — Okiwaii LLC</p>
+        </div>
+
+        <div class="contact-bar">
+            <a href="mailto:glphealthtracker@proton.me" class="email">glphealthtracker@proton.me</a>
+            <p class="response">We respond within 24–48 hours</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Subscription isn't loading or shows an error?</h4>
+            <p>This is completely normal for newly downloaded apps. Apple's servers need a few minutes to activate subscriptions. Close the app completely, wait a minute, then reopen it and try again. If it still doesn't work after an hour, email us.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How do I cancel my subscription?</h4>
+            <p>Open the Settings app on your iPhone → Tap your name at the top → Tap Subscriptions → Tap GLP Health Tracker → Tap Cancel Subscription. You'll keep access until the end of your billing period.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>I was charged but Premium isn't working?</h4>
+            <p>Open the app and tap "Start Premium" on any locked feature. Then tap "Restore Purchases" at the bottom of the Premium screen. This reconnects your subscription. If it still doesn't work, email us with the Apple ID email you used to purchase.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How do I request a refund?</h4>
+            <p>Refunds are processed by Apple. Visit <a href="https://reportaproblem.apple.com" style="color:#0d9488;">reportaproblem.apple.com</a>, sign in with your Apple ID, and select the subscription purchase.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How do I share my progress with my doctor?</h4>
+            <p>Use the "Doctor Share" feature on the Home tab to generate a PDF summary of your treatment history. You can email, print, or AirDrop it to your healthcare provider. This feature is free for all users.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is my health data private?</h4>
+            <p>Yes. All your health data is stored locally on your device. We never see, access, or transmit your health information. See our Privacy Policy below for full details.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can I recover my data if I delete the app?</h4>
+            <p>No. All data is stored locally on your device — uninstalling the app permanently deletes your data. We recommend using Doctor Share to export a PDF backup before making any changes.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is this app a medical device?</h4>
+            <p>No. GLP Health Tracker is a personal wellness tracking tool. It does not provide medical advice, diagnosis, or treatment. Always consult your healthcare provider before making changes to your medication or treatment plan.</p>
+        </div>
+    </div>
+
+    <!-- ==================== TERMS ==================== -->
+    <div class="section" id="terms">
+        <div class="section-header">
+            <h2>Terms of Service</h2>
+            <p class="entity">GLP Health Tracker — Okiwaii LLC</p>
+            <p class="subtitle">Effective: March 5, 2026 | Last Updated: March 5, 2026</p>
+        </div>
+
+        <h3 class="legal-heading">1. Acceptance of Terms</h3>
+        <p class="legal-text">By downloading, installing, or using GLP Health Tracker ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+        <p class="legal-text">These Terms constitute a legally binding agreement between you ("User," "you," or "your") and Okiwaii LLC ("Company," "we," "us," or "our"), a <strong>Texas limited liability company</strong>.</p>
+
+        <h3 class="legal-heading">2. Description of Service</h3>
+        <p class="legal-text">GLP Health Tracker is a personal wellness tracking application that allows users to log GLP-1 medication injections, track weight, record side effects, and generate reports. The App is designed to help users organize personal health information related to GLP-1 medication use.</p>
+
+        <h3 class="legal-heading">3. Medical Disclaimer — IMPORTANT</h3>
+        <div class="important-box">
+            <p><strong>THE APP IS NOT A MEDICAL DEVICE.</strong> GLP Health Tracker does not provide medical advice, diagnosis, or treatment. The App is a personal wellness tracking tool only.</p>
+        </div>
+        <ul class="legal-list">
+            <li>The App is <strong>not</strong> FDA-cleared, FDA-approved, or regulated as a medical device.</li>
+            <li>The App does <strong>not</strong> replace professional medical advice, diagnosis, or treatment.</li>
+            <li>Information displayed in the App (including Journey Intelligence insights, dose tracking, and progress summaries) is based solely on data you enter and general wellness patterns. It is <strong>not</strong> a clinical recommendation.</li>
+            <li><strong>Never</strong> change your medication, dosage, or treatment plan based solely on information from this App. Always consult your prescribing physician or qualified healthcare provider.</li>
+            <li>If you experience a medical emergency, call 911 immediately. Do not rely on this App in any emergency.</li>
+        </ul>
+        <p class="legal-text"><strong>By using this App, you acknowledge that you use it at your own risk and that any health decisions you make are your own responsibility.</strong></p>
+
+        <h3 class="legal-heading">4. Assumption of Risk</h3>
+        <p class="legal-text">You expressly assume all risk associated with using the App to track health-related information. You understand that:</p>
+        <ul class="legal-list">
+            <li>Self-reported health data may contain errors.</li>
+            <li>The App's insights and pattern detection are based on general wellness information, not clinical analysis.</li>
+            <li>Weight loss results vary by individual and are influenced by many factors beyond medication.</li>
+            <li>Medication titration schedules referenced in the App are general guidelines only.</li>
+            <li>Third-party resources linked from the App (including provider directories) are not endorsed, verified, or guaranteed by Okiwaii LLC.</li>
+        </ul>
+
+        <h3 class="legal-heading">5. User Accounts and Data</h3>
+        <ul class="legal-list">
+            <li><strong>No Account Required.</strong> The App does not currently require user account creation.</li>
+            <li><strong>Local Storage.</strong> All health data is stored locally on your device. Okiwaii LLC does not have access to your health data.</li>
+            <li><strong>Data Accuracy.</strong> You are solely responsible for the accuracy of data you enter.</li>
+            <li><strong>Data Loss.</strong> Uninstalling the App or losing your device may result in permanent data loss. Okiwaii LLC is not responsible for any data loss.</li>
+        </ul>
+
+        <h3 class="legal-heading">6. Subscription Terms</h3>
+        <h4 class="legal-subheading">6.1 Free Tier</h4>
+        <p class="legal-text">The App offers free features including medication logging, weight tracking, symptom tracking, Journey Intelligence insights, Smart Reminders, Doctor Share PDF reports, and the Find Doctor directory.</p>
+        <h4 class="legal-subheading">6.2 Premium Subscription</h4>
+        <p class="legal-text">Premium features (including HIPAA records request templates, prior authorization templates, transition guide, extended history, and backdate entries) require a paid subscription.</p>
+        <h4 class="legal-subheading">6.3 Billing &amp; Auto-Renewal</h4>
+        <p class="legal-text">Payment is charged to your Apple ID at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
+        <h4 class="legal-subheading">6.4 Cancellation</h4>
+        <p class="legal-text">Cancel anytime through your Apple ID Settings > Subscriptions. Cancellation takes effect at the end of the current billing period. No partial refunds are provided.</p>
+        <h4 class="legal-subheading">6.5 Free Trials &amp; Refunds</h4>
+        <p class="legal-text">If offered, free trials automatically convert to paid subscriptions unless canceled 24 hours before the trial ends. Refund requests are handled by Apple at <a href="https://reportaproblem.apple.com" style="color:#0d9488;">reportaproblem.apple.com</a>.</p>
+
+        <h3 class="legal-heading">7. Acceptable Use</h3>
+        <p class="legal-text">You agree not to:</p>
+        <ul class="legal-list">
+            <li>Use the App for any unlawful purpose.</li>
+            <li>Attempt to reverse-engineer, decompile, or disassemble the App.</li>
+            <li>Use the App to provide medical advice to others.</li>
+            <li>Represent that the App's output constitutes medical advice or clinical recommendations.</li>
+            <li>Share generated reports in a manner that misrepresents their origin or nature.</li>
+        </ul>
+
+        <h3 class="legal-heading">8. Intellectual Property</h3>
+        <p class="legal-text">The App, including its code, design, content, templates, and branding, is the exclusive property of Okiwaii LLC and is protected by copyright, trademark, and other intellectual property laws. The HIPAA records request templates, prior authorization templates, and transition guide content are proprietary to Okiwaii LLC. "GLP Health Tracker" is a trademark of Okiwaii LLC. You are granted a limited, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes.</p>
+
+        <h3 class="legal-heading">9. Third-Party Services</h3>
+        <ul class="legal-list">
+            <li><strong>Obesity Medicine Association (OMA) Provider Directory</strong> — An independent third-party directory. Okiwaii LLC does not endorse, verify credentials of, or guarantee any listed provider.</li>
+            <li><strong>RevenueCat</strong> — For subscription management. See RevenueCat's privacy policy for details.</li>
+            <li><strong>Apple</strong> — For payment processing and subscription billing.</li>
+        </ul>
+        <p class="legal-text">Okiwaii LLC is not responsible for the availability, accuracy, or practices of any third-party service.</p>
+
+        <h3 class="legal-heading">10. Limitation of Liability</h3>
+        <div class="allcaps-box">
+            <p>To the maximum extent permitted by applicable law, Okiwaii LLC, its members, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App. Total liability shall not exceed the amount you paid for the App in the preceding twelve (12) months. Okiwaii LLC is not liable for any health outcomes, medical decisions, or treatment results related to your use of the App.</p>
+        </div>
+
+        <h3 class="legal-heading">11. Indemnification</h3>
+        <p class="legal-text">You agree to indemnify, defend, and hold harmless Okiwaii LLC, its members, officers, employees, and agents from any claims, damages, losses, liabilities, or expenses (including reasonable attorneys' fees) arising from your use of the App, your violation of these Terms, any health decisions you make based on information from the App, and any third-party claims related to your use of the App.</p>
+
+        <h3 class="legal-heading">12. Disclaimer of Warranties</h3>
+        <div class="allcaps-box">
+            <p>The App is provided "as is" and "as available" without warranties of any kind, whether express, implied, or statutory. Okiwaii LLC disclaims all warranties, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement.</p>
+        </div>
+
+        <h3 class="legal-heading">13. Governing Law &amp; Dispute Resolution</h3>
+        <ul class="legal-list">
+            <li>These Terms are governed by the laws of the <strong>State of Texas</strong>.</li>
+            <li>Disputes shall be resolved through <strong>binding arbitration</strong> administered by the American Arbitration Association (AAA) in the State of Texas.</li>
+            <li><strong>You waive any right to participate in a class action lawsuit or class-wide arbitration.</strong></li>
+            <li>Small claims court actions are excluded from this arbitration requirement.</li>
+        </ul>
+
+        <h3 class="legal-heading">14. Changes, Termination &amp; General</h3>
+        <p class="legal-text">We may update these Terms from time to time. Material changes will be communicated by updating the "Last Updated" date. Your continued use of the App constitutes acceptance. We may terminate access at any time. Sections 3, 4, 10, 11, 12, and 13 survive termination. If any provision is unenforceable, the remaining provisions continue in full force. These Terms, together with our Privacy Policy, constitute the entire agreement.</p>
+    </div>
+
+    <!-- ==================== PRIVACY ==================== -->
+    <div class="section" id="privacy">
+        <div class="section-header">
+            <h2>Privacy Policy</h2>
+            <p class="entity">GLP Health Tracker — Okiwaii LLC</p>
+            <p class="subtitle">Effective: March 5, 2026 | Last Updated: March 5, 2026</p>
+        </div>
+
+        <div class="notice-box">
+            <p><strong>Your health data stays on your device.</strong> We designed the App with a privacy-first approach. We never see, access, or transmit your health information.</p>
+        </div>
+
+        <h3 class="legal-heading">1. Information You Provide</h3>
+        <p class="legal-text">The App allows you to enter:</p>
+        <ul class="legal-list">
+            <li><strong>Medication data:</strong> medication type, current dose, injection dates, dose history</li>
+            <li><strong>Body measurements:</strong> weight entries, height, starting weight</li>
+            <li><strong>Health observations:</strong> side effects, symptom severity, notes</li>
+            <li><strong>Profile information:</strong> name (optional), medication start date, healthcare provider type</li>
+            <li><strong>Transition tracking:</strong> telehealth-to-local-doctor transition checklist progress</li>
+        </ul>
+
+        <h3 class="legal-heading">2. Local Storage — Your Data Stays on Your Device</h3>
+        <p class="legal-text"><strong>All health data you enter is stored locally on your device.</strong> This data is not transmitted to Okiwaii LLC servers, cloud storage, or any third party. We do not have access to your health data.</p>
+        <ul class="legal-list">
+            <li>Your medication, weight, and symptom data never leaves your device.</li>
+            <li>We cannot view, access, or recover your health data.</li>
+            <li>Uninstalling the App or losing your device means your data cannot be recovered.</li>
+        </ul>
+
+        <h3 class="legal-heading">3. Third-Party Services</h3>
+        <p class="legal-text">The App uses these third-party services that may collect certain information:</p>
+        <h4 class="legal-subheading">RevenueCat (Subscription Management)</h4>
+        <ul class="legal-list">
+            <li>Collects: Apple ID (anonymized), subscription status, purchase history</li>
+            <li>Purpose: Managing premium subscriptions and verifying purchase status</li>
+            <li>Privacy: <a href="https://www.revenuecat.com/privacy" style="color:#0d9488;">revenuecat.com/privacy</a></li>
+        </ul>
+        <h4 class="legal-subheading">Apple (App Store &amp; StoreKit)</h4>
+        <ul class="legal-list">
+            <li>Collects: Apple ID, payment information, purchase history</li>
+            <li>Purpose: Processing payments and managing subscriptions</li>
+            <li>Privacy: <a href="https://www.apple.com/privacy" style="color:#0d9488;">apple.com/privacy</a></li>
+        </ul>
+
+        <h3 class="legal-heading">4. What We Do NOT Collect</h3>
+        <ul class="legal-list">
+            <li>Names, emails, or contact info (unless you contact us directly)</li>
+            <li>Location data</li>
+            <li>Photos, camera, or microphone data</li>
+            <li>Contacts, calendars, or other device data</li>
+            <li>Advertising identifiers or behavioral tracking</li>
+            <li>Health data from Apple HealthKit or any other platform</li>
+        </ul>
+
+        <h3 class="legal-heading">5. How We Use Information</h3>
+        <p class="legal-text">Health data on your device is used solely to power your dashboard, generate insights (processed on-device), trigger reminders, generate Doctor Share PDFs, and calculate progress statistics. Subscription data processed by RevenueCat is used solely to verify and manage your subscription.</p>
+
+        <h3 class="legal-heading">6. We Do Not Sell Your Data</h3>
+        <p class="legal-text"><strong>We do not sell, rent, or trade your personal information.</strong> We share information only: with your consent (when you share a PDF report), with RevenueCat for subscription processing, when required by law, or in the event of a business transfer.</p>
+
+        <h3 class="legal-heading">7. Data Security</h3>
+        <p class="legal-text">All health data is stored locally on your device. We do not operate servers that store your health data. Subscription data is encrypted in transit via TLS. We recommend enabling device-level security (passcode, Face ID, or Touch ID).</p>
+        <div class="notice-box">
+            <p><strong>Note:</strong> AsyncStorage data is not encrypted at rest on your device. Your local data security depends on your device settings. Keep your device software updated.</p>
+        </div>
+
+        <h3 class="legal-heading">8. Your Rights</h3>
+        <p class="legal-text">You can access, delete individual entries, export via Doctor Share, or delete all data by uninstalling the App at any time.</p>
+        <h4 class="legal-subheading">California Residents (CCPA)</h4>
+        <p class="legal-text">You have the right to know, delete, and opt out of sale (we don't sell data). Contact: <a href="mailto:glphealthtracker@proton.me" style="color:#0d9488;">glphealthtracker@proton.me</a></p>
+        <h4 class="legal-subheading">European Users (GDPR)</h4>
+        <p class="legal-text">You have rights to access, rectification, erasure, portability, and objection. Since all data is local, most rights are automatically fulfilled. For RevenueCat data, contact us and we'll coordinate.</p>
+
+        <h3 class="legal-heading">9. Health Data &amp; HIPAA</h3>
+        <p class="legal-text">The App is a consumer wellness application, not a covered entity or business associate under HIPAA. Your use does not create a provider-patient relationship. HIPAA templates in the premium tier are informational only and do not constitute legal advice. The App does not integrate with Apple HealthKit.</p>
+
+        <h3 class="legal-heading">10. Children, Changes &amp; Contact</h3>
+        <p class="legal-text">The App is not intended for children under 13 (or 16 in the EEA). We may update this policy and will update the "Last Updated" date accordingly. Your continued use constitutes acceptance.</p>
+        <p class="legal-text" style="margin-top: 16px;"><strong>Contact:</strong> <a href="mailto:glphealthtracker@proton.me" style="color:#0d9488;">glphealthtracker@proton.me</a></p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+    <p>&copy; 2026 Okiwaii LLC. All rights reserved.</p>
+    <p style="margin-top:4px;">GLP Health Tracker v2.0.3 | <a href="mailto:glphealthtracker@proton.me">glphealthtracker@proton.me</a></p>
+</div>
+
+</body>
+</html>
